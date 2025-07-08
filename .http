@@ -1,0 +1,39 @@
+POST http://localhost:3333/products
+Content-Type: application/json
+
+{
+  "name": "model",
+  "price": 100,
+  "description": "This is a product",
+  "countInStock": 10,
+  "image": "image-url",
+  "model": "model-url"
+}
+
+###
+GET http://localhost:3333/products
+
+###
+DELETE http://localhost:3333/products/686d12936058a44b9d558791
+
+###
+GET http://localhost:3333/products/686d12eb6058a44b9d558797
+Content-Type: application/json
+
+###
+GET http://localhost:3333/products/low-stock
+
+
+###
+PUT http://localhost:3333/products/686d12eb6058a44b9d558797
+Content-Type: application/json
+
+{
+  "name": "Updated Product Test",
+  "price": 150,
+  "description": "This is an updated product",
+  "countInStock": 10,
+  "image": "updated-image-url"
+}
+
+

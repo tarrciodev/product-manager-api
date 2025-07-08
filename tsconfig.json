@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "_version": "22.0.0",
+    "compilerOptions": {
+        "lib": ["es2023"],
+        "module": "ESNext",
+        "target": "es2022",
+        "strict": true,
+        "esModuleInterop": false, // Disable for pure ESM
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "outDir": "./dist",
+        "rootDir": "./src"
+    },
+    "include": ["src/**/*", "test/**/*"],
+    "exclude": ["node_modules", "dist", "coverage"]
+}
