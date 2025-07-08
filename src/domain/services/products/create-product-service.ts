@@ -1,3 +1,4 @@
+import { throwClientError } from '../../../shared/error-handlling'
 import { Product } from '../../entities/product-entity'
 import type { ProductsRepository } from '../../repositories/products/products-repository'
 import type { CreateProductDTO } from './create-product-dto'
@@ -21,7 +22,7 @@ export class CreateProductService {
     })
 
     if (productAlreadyExists) {
-      throw new Error(`Product with name ${data.name} already exists`)
+      throwClientError(`Product with name ${data.name} already exists`)
     }
 
     const response = await this.productsRepository.create(data)

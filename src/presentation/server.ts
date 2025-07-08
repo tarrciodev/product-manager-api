@@ -9,6 +9,7 @@ import {
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 import { env } from '../env'
+import { setupErrorHandler } from '../shared/error-handlling'
 import { connectToMongoDB } from './databases/mongo'
 import { productRoutes } from './routes/product-routes'
 
@@ -37,6 +38,7 @@ app.register(fastifySwaggerUi, {
 export function startServer() {
   connectToMongoDB()
   app.register(productRoutes)
+  setupErrorHandler(app)
   app
     .listen({ port: env.PORT, host: '0.0.0.0' })
     .then(() => {

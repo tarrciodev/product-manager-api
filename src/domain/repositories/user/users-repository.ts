@@ -1,4 +1,4 @@
-import type { User, UserEntityProps } from '../../entities/user-entity'
+import type { User, UserEntityProps } from '../../domain/entities/user-entity'
 
 export interface UsersRepository {
   create(user: User): Promise<User>

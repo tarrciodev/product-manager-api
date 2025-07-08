@@ -1,7 +1,7 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import z from 'zod'
-import { MongoProductsRepository } from '../../../repositories/products/mongo/mongo-repository'
-import { DeleteProductUseCase } from '../../../services/products/delete-product-service'
+import { MongoProductsRepository } from '../../../domain/repositories/products/mongo/mongo-repository'
+import { DeleteProductUseCase } from '../../../domain/services/products/delete-product-service'
 
 export const deleteProductController: FastifyPluginAsyncZod = async app => {
   app.delete(

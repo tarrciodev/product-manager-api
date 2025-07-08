@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "name": "model",
-  "price": 100,
+  "price": true,
   "description": "This is a product",
   "countInStock": 10,
   "image": "image-url",

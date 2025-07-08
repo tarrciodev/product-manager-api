@@ -1,7 +1,7 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import z from 'zod'
-import { MongoProductsRepository } from '../../../repositories/products/mongo/mongo-repository'
-import { GetProductByIdService } from '../../../services/products/get-product-by-id-service'
+import { MongoProductsRepository } from '../../../domain/repositories/products/mongo/mongo-repository'
+import { GetProductByIdService } from '../../../domain/services/products/get-product-by-id-service'
 
 export const getProductByIdController: FastifyPluginAsyncZod = async app => {
   app.get(

@@ -1,4 +1,7 @@
-import { User, type UserEntityProps } from '../../../entities/user-entity'
+import {
+  User,
+  type UserEntityProps,
+} from '../../../domain/entities/user-entity'
 import type { UsersRepository } from '../users-repository'
 
 export class InMemoryUserRepository implements UsersRepository {

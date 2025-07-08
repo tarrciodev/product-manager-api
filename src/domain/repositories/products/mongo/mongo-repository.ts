@@ -1,5 +1,5 @@
+import { ProductModel } from '../../../../presentation/models/product-model'
 import { Product } from '../../../entities/product-entity'
-import { ProductModel } from '../../../models/product-model'
 import { ProductsRepository } from '../products-repository'
 
 export class MongoProductsRepository implements ProductsRepository {
