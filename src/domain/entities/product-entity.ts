@@ -11,8 +11,11 @@ interface ProductEntityProps {
 export class Product {
   private props: ProductEntityProps
 
+  set id(id: string) {
+    this.props.id = id
+  }
   get id() {
-    return this.props.id
+    return this.props.id as string
   }
 
   get name() {

@@ -1,6 +1,6 @@
 import { ProductModel } from '../../../../presentation/models/product-model'
 import { Product } from '../../../entities/product-entity'
-import { ProductsRepository } from '../products-repository'
+import type { ProductsRepository } from '../products-repository'
 
 export class MongoProductsRepository implements ProductsRepository {
   async create(product: Product): Promise<Product> {

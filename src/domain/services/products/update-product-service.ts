@@ -1,6 +1,6 @@
 import { Product } from '../../entities/product-entity'
 import type { ProductsRepository } from '../../repositories/products/products-repository'
-import { UpdateProductDTO } from './update-product-dto'
+import type { UpdateProductDTO } from './update-product-dto'
 
 interface UpdateProductRequest {
   id: string

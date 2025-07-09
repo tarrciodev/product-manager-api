@@ -17,6 +17,7 @@ describe('Update product', () => {
       description: 'This is a product',
       countInStock: 5,
       image: 'image-url',
+      model: 'model',
     })
 
     const product = await updateProduct.execute({
@@ -27,6 +28,7 @@ describe('Update product', () => {
         description: 'This is an updated product',
         countInStock: 10,
         image: 'image-url',
+        model: 'model',
       },
     })
 
@@ -46,6 +48,7 @@ describe('Update product', () => {
           description: 'This is an updated product',
           countInStock: 10,
           image: 'image-url',
+          model: 'model',
         },
       })
     ).rejects.toThrow()
